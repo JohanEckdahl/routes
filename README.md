@@ -1,1 +1,1 @@
-# skk-routes
+# routes
