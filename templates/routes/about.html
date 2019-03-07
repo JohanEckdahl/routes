@@ -1,0 +1,44 @@
+{% extends 'routes/base.html' %}
+{% load static %}
+{% block title %} Route List {%endblock%}
+
+{%block body %}
+<div class="w3-container w3-card-2 w3-white w3-margin-bottom  w3-margin-right  w3-margin-left" style="max-width:2000px">
+
+<ul class="nav nav-tabs">
+  <li class="active"><a data-toggle="tab" href="#home">Gym Layout</a></li>
+  <li><a data-toggle="tab" href="#menu1">Intro to the Gym</a></li>
+  <li><a data-toggle="tab" href="#menu2"> Setter's Manual (English)</a></li>
+  <li><a data-toggle="tab" href="#menu3"> Setter's Manual (Svenska)</a></li>
+  <li><a data-toggle="tab" href="#menu4"> About This Site</a></li>
+</ul>
+
+<div class="tab-content">
+
+  <div id="home" class="tab-pane fade in active">
+    <img class=img-responsive src="{% static 'routes/images/gymlayout.jpg' %}"max-width: 100%; 
+display:block; 
+height: auto;/>
+  </div>
+
+
+  <div id="menu1" class="tab-pane fade embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://docs.google.com/document/d/e/2PACX-1vRCvy7rxyc-HunIOrpRsyQUilMjZdDWpZQ2gBaUPGPo8769aPOjVHt9uFR9ad-CbIce1DBvsOuz3gC4/pub?embedded=true"></iframe>
+  </div>
+  <div id="menu2" class="tab-pane fade embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://docs.google.com/document/d/e/2PACX-1vTncSupRDPhl2qUYboXALaWbfUhmh3rF0LWfNSJYGKQsWySbXrum4w1oOJliPW02Tdye1QJy3npT3oL/pub?embedded=true"></iframe>
+  </div>
+  <div id="menu3" class="tab-pane fade embed-responsive embed-responsive-16by9">
+    <iframe class="embed-responsive-item" src="https://docs.google.com/document/d/e/2PACX-1vRw7vGjNQcEH4A74dBr22_W_bODRlgSs1zbpHy9XjjTcjb2EuAwSZ673MOPo__2rpx88bl1PUxkr5kb/pub?embedded=true"></iframe>
+  </div>
+
+	  <div id="menu4" class="tab-pane fade in">
+    <p>Source code for this website can be found on <a href="https://github.com/JohanEckdahl/skksetting">GitHub via this link</a> Please let us know if you'd like to contribute.</p>
+  </div>
+
+
+
+  </div>
+</div>
+
+{% endblock %}

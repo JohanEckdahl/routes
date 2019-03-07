@@ -1,0 +1,52 @@
+{% extends 'routes/base.html' %}
+{% block title %}Add Comment{% endblock %}
+
+{% block body %}
+<div class="container-fluid">
+
+    <div class="row">
+
+        <!-- Left Album Info -->
+        <div class="col-sm-8 col-md-9">
+            <div class="panel panel-default">
+                <div class="panel-body">
+            
+		{% for comment in comments %}
+			 <p><strong>{{comment.username}}</strong>&nbsp;&nbsp;{{comment.date}}:<br><br>
+			 "{{comment.body}}"</p>
+		{% endfor %}
+		
+                </div>
+            </div>
+        </div>
+
+        <!-- Right Song Info -->
+        <div class="col-sm-4 col-md-3">
+
+           
+
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <h3>Add Comment</h3>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+						 <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+								{{form}}
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

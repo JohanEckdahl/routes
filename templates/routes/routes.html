@@ -1,0 +1,16 @@
+{% extends 'routes/base.html' %}
+{% load render_table from django_tables2 %}
+
+{% block body %}
+<div class="w3-container w3-card-2 w3-white w3-margin-bottom  w3-margin-right  w3-margin-left" style="max-width:2000px">
+
+
+
+<h2 class="sub-header">Lead Routes</h2>          
+		<div class="table-responsive">
+        {% render_table table %}
+		</div>
+
+</div>
+{% endblock %}
+

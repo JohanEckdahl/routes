@@ -1,0 +1,23 @@
+
+
+{% extends 'routes/base.html' %}
+{% load static %}
+{% block title %} Analytics {%endblock%}
+
+img {
+    width: 300px;
+    margin: 0 auto;
+}
+
+{%block body %}
+
+
+{% for path in image_path %}
+	<img class="img-responsive center-block" src="{{path}}"  max-width: 100%; 
+	display:block; 
+	height: auto;/>
+{% endfor %}
+
+
+
+{% endblock %}

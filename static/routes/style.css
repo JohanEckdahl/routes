@@ -1,0 +1,23 @@
+li a {
+	color: blue;
+}
+
+body {
+	background: white url("images/background.jpg");
+}
+
+a {
+    text-decoration: none;
+}
+
+.navbar{
+	border-radius: 0;
+}
+
+.navbar-brand{
+	font-family: 'Voltaire'
+
+}
+
+
+
