@@ -5,7 +5,7 @@ from . import tables
 app_name='routes'
 
 urlpatterns = [
-    path('comments/', views.comments, name = 'comments'),
+	path('comments/', views.comments, name = 'comments'),
 	path('<int:idn>/comment/', views.comment, name = 'comment'),
 	#path('routes/', views.routes, name='routes'),
 	path('about/', views.about, name='about'),
